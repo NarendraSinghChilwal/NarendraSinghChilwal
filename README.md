@@ -13,9 +13,14 @@ I'm currently doing Masters in Data Analytics from National College of Ireland
 ![](https://nirzak-streak-stats.vercel.app/?user=NarendraSinghChilwal&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=NarendraSinghChilwal&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
+
 ## 🐍 GitHub Contribution Snake
 
-![GitHub Snake](https://github.com/narendrasinghchilwal/narendrasinghchilwal/blob/output/github-snake.svg)
+![GitHub Snake](https://github.com/NarendraSinghChilwal/NarendraSinghChilwal/blob/output/github-snake.svg)
+
+## 🌑 GitHub Contribution Snake (Dark)
+
+![GitHub Snake Dark](https://github.com/NarendraSinghChilwal/NarendraSinghChilwal/blob/output/github-snake-dark.svg)
 
 
 ## 🏆 GitHub Trophies
