@@ -1,4 +1,5 @@
-# 💫 About Me:
+
+<h1>Hi 👋, I'm Narendra</h1>
 I'm currently doing Masters in Data Analytics from National College of Ireland
 
 
