@@ -1,5 +1,5 @@
-<h1>Hi 👋, I’m Narendra</h1>
-I’m a Data Analytics master’s student at the National College of Ireland and an aspiring Data Engineer.
+<h1>Hello World!, I am Narendra, A data enthusiast based in Dublin,Ireland. </h1>
+I’m a passionate Data Engineer and a master’s student at the National College of Ireland.
 
 ---
 
