@@ -24,13 +24,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Dark mode SVG
+      # Dark mode SVG (use `palette:` instead of args)
       - name: Generate Dark Snake SVG
         uses: Platane/snk@master
         with:
           github_user_name: narendrasinghchilwal
           svg_out_path: dist/github-snake-dark.svg
-          args: --palette github-dark
+          palette: github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
