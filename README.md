@@ -13,13 +13,6 @@ I’m a passionate Data Engineer and a master’s student at the National Colleg
 
 ---
 
-## 📊 GitHub Stats
-![](https://github-readme-stats.vercel.app/api?username=NarendraSinghChilwal&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=NarendraSinghChilwal&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=NarendraSinghChilwal&theme=dark&layout=compact)
-
----
-
 <picture>
   <source
     srcset="https://github.com/NarendraSinghChilwal/NarendraSinghChilwal/blob/output/github-snake-dark.svg"
