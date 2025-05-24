@@ -1,43 +1,66 @@
-name: Generate Snake Animation
+name: GitHub Snake Game
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # every day at midnight UTC
-  workflow_dispatch:
+    - cron: "0 0 * * *"    # daily at midnight UTC
+  workflow_dispatch:       # manual trigger
+  push:
+    branches:
+      - main              # also runs on every push to main
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    timeout-minutes: 10
 
-      - name: Create dist directory
+    steps:
+      # 1️⃣ Check out your code
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0         # needed if you create branches
+
+      # 2️⃣ Make sure dist/ exists
+      - name: Prepare dist folder
         run: mkdir -p dist
 
-      # Light mode SVG
-      - name: Generate Light Snake SVG
-        uses: Platane/snk@master
+      # 3️⃣ Light‐mode SVG
+      - name: Generate Light SVG
+        uses: Platane/snk@v3
         with:
-          github_user_name: narendrasinghchilwal
+          github_user_name: ${{ github.repository_owner }}
           svg_out_path: dist/github-snake.svg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Dark mode SVG (use `palette:` instead of args)
-      - name: Generate Dark Snake SVG
-        uses: Platane/snk@master
+      # 4️⃣ Dark‐mode SVG
+      - name: Generate Dark SVG
+        uses: Platane/snk@v3
         with:
-          github_user_name: narendrasinghchilwal
+          github_user_name: ${{ github.repository_owner }}
           svg_out_path: dist/github-snake-dark.svg
-          palette: github-dark
+          args: "--palette github-dark"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v2.1.3
+      # 5️⃣ Ocean GIF
+      - name: Generate Ocean GIF
+        uses: Platane/snk@v3
         with:
-          target_branch: output
-          build_dir: dist
+          github_user_name: ${{ github.repository_owner }}
+          gif_out_path: dist/ocean.gif
+          args: >-
+            --palette github-dark
+            --snake-color orange
+            --dots-color "#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 6️⃣ Deploy dist/ to your `output` branch
+      - name: Publish to output branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: output
+          publish_dir: ./dist
+          commit_message: "Update snake animation [skip ci]"
