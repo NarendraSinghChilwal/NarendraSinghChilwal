@@ -1,4 +1,4 @@
-<h1>Hello World!, I am Narendra, A data enthusiast based in Dublin,Ireland. </h1>
+<h1>Hello World!, I'm Narendra, a Data Enthusiast based in Dublin,Ireland. </h1>
 I’m a passionate Data Engineer and a master’s student at the National College of Ireland.
 
 ---
