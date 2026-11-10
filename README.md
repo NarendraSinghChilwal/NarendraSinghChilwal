@@ -49,4 +49,4 @@ I build batch and incremental pipelines on Azure Databricks, Delta Lake and Azur
 <picture>
 <source srcset="https://raw.githubusercontent.com/NarendraSinghChilwal/NarendraSinghChilwal/output/github-snake-dark.svg" media="(prefers-color-scheme: dark)" />
 <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/NarendraSinghChilwal/NarendraSinghChilwal/output/github-snake.svg" width="640" />
-</picture>picture>
+</picture>
